@@ -275,6 +275,9 @@
 <div class="col-sm-6 col-md-4 col-xl-3 col-partner">
 <div class="partner-inner"><img alt="" src="{{ asset('assets/images/partners/9.png') }}"></div>
 </div>
+<div class="col-sm-6 col-md-4 col-xl-3 col-partner">
+<div class="partner-inner"><img alt="" src="{{ asset('assets/images/partners/10.png') }}"></div>
+</div>
 </div>
 </div>
 </div>
