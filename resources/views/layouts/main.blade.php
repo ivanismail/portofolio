@@ -135,35 +135,16 @@
 <div class="col-xl-5">
 <h2 class="title-uppercase"> <span class="text-primary">My</span> Skill</h2>
 {{-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta sit pariatur odio unde deleniti eveniet magni cum, ad iure, vel nisi minima vero voluptates. --}}
-<div class="progress-bars">
-<div class="clearfix">
-<div class="number float-left">Mobile Flutter</div>
-<div class="number float-right">80%</div>
-</div>
-<div class="progress">
-<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="clearfix">
-<div class="number float-left">Laravel</div>
-<div class="number float-right">60%</div>
-</div>
-<div class="progress">
-<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="clearfix">
-<div class="number float-left">Codeigniter</div>
-<div class="number float-right">70%</div>
-</div>
-<div class="progress">
-<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="clearfix">
-<div class="number float-left">VB.Net</div>
-<div class="number float-right">85%</div>
-</div>
-<div class="progress">
-<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+@foreach ($data as $row)
+    <div class="progress-bars">
+    <div class="clearfix">
+    <div class="number float-left">{{ $row->skill_name }}</div>
+    <div class="number float-right">{{ $row->percent }}%</div>
+    </div>
+    <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: {{ $row->percent }}%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+@endforeach
 </div>
 </div>
 </div>
