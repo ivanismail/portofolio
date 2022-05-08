@@ -9,7 +9,7 @@ class SkillController extends Controller
 {
     public function index()
     {
-        $data = Skill::all();
+        $data = Skill::select()->orderByDesc('id')->get();
         return view('layouts.main', compact('data'));
     }
 }
