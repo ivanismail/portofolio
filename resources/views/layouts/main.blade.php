@@ -144,8 +144,8 @@
     <div class="progress">
     <div class="progress-bar" role="progressbar" style="width: {{ $row->percent }}%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
-@endforeach
-</div>
+    </div>
+@endforeach    
 </div>
 </div>
 </div>
