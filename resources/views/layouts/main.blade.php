@@ -28,23 +28,23 @@
 <div class="menu">
 <span class="close-menu icon-cross2 right-boxed"></span>
 <ul class="menu-list right-boxed">
-<li data-menuanchor="page1">
-<a href="#page1">Home</a>
+<li data-menuanchor="home">
+<a href="#home">Home</a>
 </li>
-<li data-menuanchor="page2">
-<a href="#page2">About</a>
+<li data-menuanchor="about">
+<a href="#about">About</a>
 </li>
-<li data-menuanchor="page3">
-<a href="#page3">Resume</a>
+<li data-menuanchor="resume">
+<a href="#resume">Resume</a>
 </li>
-<li data-menuanchor="page4">
-<a href="#page4">Clients</a>
+<li data-menuanchor="clients">
+<a href="#clients">Clients</a>
 </li>
-<li data-menuanchor="page5">
-<a href="#page5">Projects</a>
+<li data-menuanchor="projects">
+<a href="#projects">Projects</a>
 </li>
-<li data-menuanchor="page7">
-<a href="#page7">Contact</a>
+<li data-menuanchor="contact">
+<a href="#contact">Contact</a>
 </li>
 </ul>
 <div class="menu-footer right-boxed">
@@ -78,7 +78,7 @@
 /
 </div>
 <div class="contact-item">
-<a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><span class="__cf_email__" data-cfemail="d0b3bfbea4b1b3a490a2bfb2b5a2a4feb3bfbd">ivanismail2@gmail.com</span></a>
+<a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><span>ivanismail2@gmail.com</span></a>
 </div>
 </div>
 </header>
@@ -89,7 +89,7 @@
 <a href="https://www.linkedin.com/in/ivan-ismail-163840200/" class="icon ion-social-linkedin"></a>
 </div>
 <div class="pagepiling">
-<div data-anchor="page1" class="pp-scrollable text-white section section-1">
+<div data-anchor="home" class="pp-scrollable text-white section section-1">
 <div class="scroll-wrap">
 <div class="section-bg" style="background-image:url({{ asset('assets/images/bg/main.jpg') }});"></div>
 <div class="scrollable-content">
@@ -114,7 +114,7 @@
 </div>
 </div>
 </div>
-<div data-anchor="page2" class="pp-scrollable section section-2">
+<div data-anchor="about" class="pp-scrollable section section-2">
 <div class="scroll-wrap">
 <div class="scrollable-content">
 <div class="vertical-centred">
@@ -175,7 +175,7 @@
 </div>
 </div>
 </div>
-<div data-anchor="page3" class="pp-scrollable text-white section section-3">
+<div data-anchor="resume" class="pp-scrollable text-white section section-3">
 <div class="scroll-wrap">
 <div class="section-bg" style="background-image:url({{ asset('assets/images/bg/resume.jpg') }});"></div>
 <div class="scrollable-content">
@@ -237,7 +237,7 @@
 </div>
 </div>
 </div>
-<div data-anchor="page4" class="pp-scrollable section section-4">
+<div data-anchor="clients" class="pp-scrollable section section-4">
 <div class="scroll-wrap">
 <div class="scrollable-content">
 <div class="vertical-centred">
@@ -287,7 +287,7 @@
 </div>
 </div>
 </div>
-<div data-anchor="page5" class="pp-scrollable text-white section section-5">
+<div data-anchor="projects" class="pp-scrollable text-white section section-5">
 <div class="scroll-wrap">
 <div class="bg-changer">
 <div class="section-bg" style="background-image:url({{ asset('assets/images/bg/project1.jpg') }});"></div>
@@ -359,7 +359,7 @@
 </div>
 </div>
 </div>
-<div data-anchor="page7" class="pp-scrollable section section-7">
+<div data-anchor="contact" class="pp-scrollable section section-7">
 <div class="scroll-wrap">
 <div class="section-bg" style="background-image:url({{ asset('assets/images/bg/contact.jpg') }});"></div>
 <div class="scrollable-content">
@@ -374,7 +374,7 @@
 <h2 class="title-uppercase"><span class="text-primary">Jatiwaringin</span>, Bekasi</h2>
 <h5 class="text-muted">Jl. Sosial No.8 A</h5>
 <section class="contact-address">
-<h3><a class="mail" href="https://mail.google.com/mail/u/0/#inbox?compose=new"> <span class="__cf_email__" data-cfemail="10737f7e6471736450627f727562643e737f7d">ivanismail2@gmail.com</span></a></h3>
+<h3><a class="mail" href="https://mail.google.com/mail/u/0/#inbox?compose=new"> <span>ivanismail2@gmail.com</span></a></h3>
 <h3><span class="phone">+62 8211-303-2503</span></h3>
 </section>
 </div>
