@@ -189,18 +189,14 @@
 <h4 class="title-uppercase">Experience</h4>
 <div class="resume-content">
 <div class="resume-inner">
-<div class="resume-row">
-<h6 class="resume-type">VB.Net & Web Developer</h6>
-<p class="resume-study">Cindy Group</p>
-<p class="resume-date text-primary">Jun 2011 - Feb 2021</p>
-<p class="resume-text">Membuat dan maintenance aplikasi sesuai kebutuhan perushaan</p>
-</div>
-<div class="resume-row">
-<h6 class="resume-type">Mobile Flutter Developer</h6>
-<p class="resume-study">PT. Majapahit Teknologi Nusantara</p>
-<p class="resume-date text-primary">Mar 2021 - Present</p>
-<p class="resume-text">Membuat aplikasi sesuai kebutuhan client</p>
-</div>
+@foreach ($experiences as $row)
+    <div class="resume-row">
+    <h6 class="resume-type">{{ $row->title }}</h6>
+    <p class="resume-study">{{ $row->company }}, {{ $row->address }}</p>
+    <p class="resume-date text-primary">{{ $row->from }} - {{ $row->to }}</p>
+    <p class="resume-text">{{ $row->description }}</p>
+    </div>
+@endforeach 
 </div>
 </div>
 </div>

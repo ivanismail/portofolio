@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Education;
+use App\Models\Experience;
 use Carbon\Carbon;
 use App\Models\Skill;
 use App\Models\Profile;
@@ -35,6 +36,8 @@ class MainController extends Controller
             $exp = $now - $start_experience;
         }
 
-        return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name', 'education'));
+        $experiences = Experience::select()->orderByDesc('id')->get();
+
+        return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name', 'education', 'experiences'));
     }
 }

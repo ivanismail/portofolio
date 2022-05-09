@@ -26,7 +26,7 @@ class ProfileSeeder extends Seeder
             'facebook' => 'https://www.facebook.com/ivanismailrespect',
             'linked' => 'https://www.linkedin.com/in/ivan-ismail-163840200/',
             'instagram' => 'https://www.instagram.com/ivanismail2/',
-            'start_experience' => 2017
+            'start_experience' => 2018
         ]);
     }
 }
