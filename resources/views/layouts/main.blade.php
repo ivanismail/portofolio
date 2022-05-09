@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="{{ asset('assets/apple-touch-icon.png') }}">
 <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/apple-touch-icon-72x72.png') }}">
 <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/apple-touch-icon-114x114.png') }}">
-<title>Ivan - Portofolio</title>
+<title>{{ $first_name[0] }} - Portofolio</title>
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i&amp;display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@
 <a class="brand" href="#">
 <img class="brand-img" alt="" src="{{ asset('assets/') }}images/brand.png">
 <div class="brand-info">
-<div class="brand-name">Ivan</div>
+<div class="brand-name">{{ $first_name[0] }}</div>
 <div class="brand-text">personal</div>
 </div>
 </a>
@@ -72,17 +72,17 @@
 </button>
 <div class="contacts d-none d-md-block">
 <div class="contact-item">
-+62 8211-303-2503
+{{ $phone_number }}
 </div>
 <div class="contact-item spacer">
 /
 </div>
 <div class="contact-item">
-<a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><span>ivanismail2@gmail.com</span></a>
+<a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><span>{{ $email }}</span></a>
 </div>
 </div>
 </header>
-<div class="copy-bottom white boxed">© Ivan Ismail 2022.</div>
+<div class="copy-bottom white boxed">© {{ $name }} {{ $now }}.</div>
 <div class="social-list social-list-bottom boxed">
 <a href="https://twitter.com/ivanismail2" class="icon ion-social-twitter"></a>
 <a href="https://web.facebook.com/ivanismailrespect" class="icon ion-social-facebook"></a>
@@ -102,7 +102,7 @@
 <div class="row">
 <div class="col-md-8 col-lg-6">
 <p class="subtitle-top">Welcome To<br>My Personal Website</p>
-<h1 class="display-2 text-white"><span class="text-primary">Hello</span> I am<br> Ivan Ismail</h1>
+<h1 class="display-2 text-white"><span class="text-primary">Hello</span> I am<br> {{ $name }}</h1>
 {{-- <a href="https://www.youtube.com/watch?v=0O2aH4XLbto" class="popup-youtube icon ion-ios-play"></a> --}}
 </div>
 </div>
@@ -127,7 +127,7 @@
 <div class="col-xl-7">
 <div class="experience-box pb-5">
 <div class="experience-content">
-<div class="experience-number text-texture">4</div><br class="d-block d-sm-none">
+<div class="experience-number text-texture">{{ $exp }}</div><br class="d-block d-sm-none">
 <div class="experience-info">Years<br>Experience<br>Working</div>
 </div>
 </div>
@@ -135,7 +135,7 @@
 <div class="col-xl-5">
 <h2 class="title-uppercase"> <span class="text-primary">My</span> Skill</h2>
 {{-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta sit pariatur odio unde deleniti eveniet magni cum, ad iure, vel nisi minima vero voluptates. --}}
-@foreach ($data as $row)
+@foreach ($skill as $row)
     <div class="progress-bars">
     <div class="clearfix">
     <div class="number float-left">{{ $row->skill_name }}</div>
@@ -352,11 +352,11 @@
 <div class="intro overflow-hidden">
 <div class="row">
 <div class="col-md-6">
-<h2 class="title-uppercase"><span class="text-primary">Jatiwaringin</span>, Bekasi</h2>
+<h2 class="title-uppercase"><span class="text-primary">{{ $city }}</span>, {{ $province }}</h2>
 <h5 class="text-muted">Jl. Sosial No.8 A</h5>
 <section class="contact-address">
-<h3><a class="mail" href="https://mail.google.com/mail/u/0/#inbox?compose=new"> <span>ivanismail2@gmail.com</span></a></h3>
-<h3><span class="phone">+62 8211-303-2503</span></h3>
+<h3><a class="mail" href="https://mail.google.com/mail/u/0/#inbox?compose=new"> <span>{{ $email }}</span></a></h3>
+<h3><span class="phone">{{ $phone_number }}</span></h3>
 </section>
 </div>
 <div class="col-md-6">
