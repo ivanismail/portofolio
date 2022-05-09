@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Education;
 use Carbon\Carbon;
 use App\Models\Skill;
 use App\Models\Profile;
@@ -12,6 +13,8 @@ class MainController extends Controller
     public function index()
     {
         $skill = Skill::select()->orderByDesc('id')->get();
+
+        $education = Education::select()->orderByDesc('id')->get();
 
         $getProfile = Profile::select()->get();
         foreach ($getProfile as $profile)
@@ -32,6 +35,6 @@ class MainController extends Controller
             $exp = $now - $start_experience;
         }
 
-        return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name'));
+        return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name', 'education'));
     }
 }

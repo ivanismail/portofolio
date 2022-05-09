@@ -172,18 +172,14 @@
 <h4 class="title-uppercase">Education</h4>
 <div class="resume-content">
 <div class="resume-inner">
-<div class="resume-row">
-<h6 class="resume-type">D3 Manajemen Informatika</h6>
-<p class="resume-study">Bina Sarana Informatika, Jatiwaringin, Jakarta</p>
-<p class="resume-date text-primary">Jan 20123 - Dec 2015</p>
-{{-- <p class="resume-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nobis animi assumenda sint recusandae! Dolor placeat debitis animi illum quo repellendus pariatur, enim doloribus, </p> --}}
-</div>
-<div class="resume-row">
-<h6 class="resume-type">S1 Sistem Informasi</h6>
-<p class="resume-study">STIKOM Cipta Karya Infromatika, Jakarta</p>
-<p class="resume-date text-primary">Jan 2016 - Dec 2017</p>
-{{-- <p class="resume-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nobis animi assumenda sint recusandae! Dolor placeat debitis animi illum quo repellendus pariatur, enim doloribus</p> --}}
-</div>
+@foreach ($education as $row)
+    <div class="resume-row">
+    <h6 class="resume-type">{{ $row->degree }} {{ $row->program_study }}</h6>
+    <p class="resume-study">{{ $row->university }}, {{ $row->address }}</p>
+    <p class="resume-date text-primary">{{ $row->from }} - {{ $row->to }}</p>
+    <p class="resume-text">{{ $row->description }}</p>
+    </div>
+@endforeach 
 </div>
 </div>
 </div>
