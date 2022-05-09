@@ -23,6 +23,7 @@ class MainController extends Controller
             $name = $profile['name'];
             $first_name = explode(" ", $name);
             $phone_number = $profile['phone_number'];
+            $wa = explode(" ", $phone_number);
             $email = $profile['email'];
             $city = $profile['city'];
             $province = $profile['province'];
@@ -38,6 +39,6 @@ class MainController extends Controller
 
         $experiences = Experience::select()->orderByDesc('id')->get();
 
-        return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name', 'education', 'experiences'));
+        return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name', 'education', 'experiences', 'wa'));
     }
 }

@@ -49,9 +49,10 @@
 </ul>
 <div class="menu-footer right-boxed">
 <div class="social-list">
-<a href="https://twitter.com/ivanismail2" class="icon ion-social-twitter"></a>
-<a href="https://web.facebook.com/ivanismailrespect" class="icon ion-social-facebook"></a>
-<a href="https://www.linkedin.com/in/ivan-ismail-163840200/" class="icon ion-social-linkedin"></a>
+    <a href={{ $twitter }} class="icon ion-social-twitter"></a>
+    <a href={{ $facebook }} class="icon ion-social-facebook"></a>
+    <a href={{ $instagram }} class="icon ion-social-instagram"></a>
+    <a href={{ $linked }} class="icon ion-social-linkedin"></a>
 </div>
 </div>
 </div>
@@ -59,7 +60,7 @@
 <header class="navbar boxed">
 <div class="navbar-bg"></div>
 <a class="brand" href="#">
-<img class="brand-img" alt="" src="{{ asset('assets/') }}images/brand.png">
+<img class="brand-img" alt="" src="{{ asset('assets/images/brand.png') }}">
 <div class="brand-info">
 <div class="brand-name">{{ $first_name[0] }}</div>
 <div class="brand-text">personal</div>
@@ -72,7 +73,7 @@
 </button>
 <div class="contacts d-none d-md-block">
 <div class="contact-item">
-{{ $phone_number }}
+<a href="https://wa.me/6282113032503"><span>{{ $phone_number }}</span></a>
 </div>
 <div class="contact-item spacer">
 /
@@ -84,9 +85,10 @@
 </header>
 <div class="copy-bottom white boxed">© {{ $name }} {{ $now }}.</div>
 <div class="social-list social-list-bottom boxed">
-<a href="https://twitter.com/ivanismail2" class="icon ion-social-twitter"></a>
-<a href="https://web.facebook.com/ivanismailrespect" class="icon ion-social-facebook"></a>
-<a href="https://www.linkedin.com/in/ivan-ismail-163840200/" class="icon ion-social-linkedin"></a>
+<a href={{ $twitter }} class="icon ion-social-twitter"></a>
+<a href={{ $facebook }} class="icon ion-social-facebook"></a>
+<a href={{ $instagram }} class="icon ion-social-instagram"></a>
+<a href={{ $linked }} class="icon ion-social-linkedin"></a>
 </div>
 <div class="pagepiling">
 <div data-anchor="home" class="pp-scrollable text-white section section-1">
@@ -348,7 +350,7 @@
 <h5 class="text-muted">Jl. Sosial No.8 A</h5>
 <section class="contact-address">
 <h3><a class="mail" href="https://mail.google.com/mail/u/0/#inbox?compose=new"> <span>{{ $email }}</span></a></h3>
-<h3><span class="phone">{{ $phone_number }}</span></h3>
+<h3><a href="https://wa.me/6282113032503"><span>{{ $phone_number }}</span></a></h3>
 </section>
 </div>
 <div class="col-md-6">
