@@ -282,46 +282,16 @@
  <div class="col-md-12">
 <h2 class="title-uppercase text-white">LATEST PROJECTS</h2>
 <div class="row-project-box row">
-<div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-<a href="project-detail.html" class="project-box">
-<div class="project-box-inner">
-<h5>SP DNIA<br>Mobile</h5>
-<div class="project-category">March - April 2022 / Aplikasi Serikat Pekerja Denso</div>
-</div>
-</a>
-</div>
-<div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-<a href="project-detail.html" class="project-box">
-<div class="project-box-inner">
-<h5>Honda<br>Power ID</h5>
-<div class="project-category">June - December 2021 / Aplikasi CRM untuk Customer Honda Power Product Indonesia</div>
-</div>
-</a>
-</div>
-<div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-<a href="project-detail.html" class="project-box">
-<div class="project-box-inner">
-<h5>Honda<br> Power ID Toko</h5>
-<div class="project-category">June - December 2021 / Aplikasi CRM untuk Customer PT. Honda Power Product Indonesia</div>
-</div>
-</a>
-</div>
-<div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-<a href="project-detail.html" class="project-box">
-<div class="project-box-inner">
-<h5>PreMan<br></h5>
-<div class="project-category">April - Mei 2021 / Aplikasi Marketplace Asuransi untuk PT. Mentari Teknologi Bermartabat</div>
-</div>
-</a>
-</div>
-<div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-<a href="project-detail.html" class="project-box">
-<div class="project-box-inner">
-<h5>Rencana<br> Anggaran Biaya</h5>
-<div class="project-category">March - April 2021 / Aplikasi Rencana Anggaran Biaya untuk PT.Mandala Mega Makmur</div>
-</div>
-</a>
-</div>
+@foreach ($project as $row)
+    <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
+    <a href="project-detail.html" class="project-box">
+    <div class="project-box-inner">
+    <h5>{{ $row->project_name }}</h5>
+    <div class="project-category">{{ $row->from }} - {{ $row->to }} / {{ $row->description }}</div>
+    </div>
+    </a>
+    </div>
+@endforeach
 </div>
 <a href="#" class="h5 link-arrow text-white">view all projects <i class="icon icon-chevron-right"></i></a>
 </div>

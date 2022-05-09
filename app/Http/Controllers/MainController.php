@@ -7,6 +7,7 @@ use App\Models\Experience;
 use Carbon\Carbon;
 use App\Models\Skill;
 use App\Models\Profile;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -39,6 +40,8 @@ class MainController extends Controller
 
         $experiences = Experience::select()->orderByDesc('id')->get();
 
-        return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name', 'education', 'experiences', 'wa'));
+        $project = Project::select()->orderByDesc('id')->limit(5)->get();
+
+        return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name', 'education', 'experiences', 'wa', 'project'));
     }
 }

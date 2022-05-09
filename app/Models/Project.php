@@ -11,7 +11,7 @@ class Project extends Model
     use HasFactory;
 
     protected $fillable = [
-        'project_name', 'description', 'client', 'from', 'to', 'link'
+        'project_name', 'description', 'client', 'from', 'to', 'link', 'photo'
     ];
 
     public function GetCreatedAttribute($value)
