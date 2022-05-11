@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Education;
-use App\Models\Experience;
+use App\Models\Contact;
 use Carbon\Carbon;
 use App\Models\Skill;
 use App\Models\Profile;
 use App\Models\Project;
+use App\Models\Education;
+use App\Models\Experience;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
@@ -43,5 +45,24 @@ class MainController extends Controller
         $project = Project::select()->orderByDesc('id')->limit(5)->get();
 
         return view('layouts.main', compact('skill', 'name', 'phone_number', 'email', 'city', 'province', 'photo', 'twitter', 'facebook', 'linked', 'instagram', 'now', 'exp', 'first_name', 'education', 'experiences', 'wa', 'project'));
+    }
+
+    public function send_message(Request $request)
+    {
+        $name = $request->input('name');
+        $email = str_replace("'", "", $request->input('email'));
+        $subject = str_replace("'", "", $request->input('subject'));
+        $message = $request->input('message');
+        $create_at = Carbon::now();
+
+        Contact::insert([
+            'name' => $name,
+            'email' => $email,
+            'subject' => $subject,
+            'message' => $message,
+            'created_at' => $create_at
+        ]);
+
+        return redirect('/');
     }
 }

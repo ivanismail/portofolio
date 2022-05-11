@@ -325,26 +325,27 @@
 </div>
 <div class="col-md-6">
 <div class="contact-info">
-<form class="js-form" novalidate="novalidate">
-<div class="row">
-<div class="form-group col-sm-6">
-<input type="text" name="name" required="" placeholder="Name*" aria-required="true">
-</div>
-<div class="form-group col-sm-6">
-<input type="email" required="" name="email" placeholder="Email*">
-</div>
-<div class="form-group col-sm-12">
-<input type="text" name="subject" placeholder="Subject (Optinal)">
- </div>
-<div class="form-group col-sm-12">
-<textarea name="message" required="" placeholder="Message*"></textarea>
-</div>
-<div class="form-group form-group-message col-sm-12">
-<span id="success" class="text-primary">Thank You, your message is successfully sent!</span>
-<span id="error" class="text-primary">Sorry, something went wrong </span>
-</div>
-<div class="col-sm-12"><button type="submit" class="btn">Contact me</button></div>
-</div>
+<form method="POST" action="/send-message">
+    @csrf
+    <div class="row">
+    <div class="form-group col-sm-6">
+    <input type="text" name="name" required="" placeholder="Name*" aria-required="true">
+    </div>
+    <div class="form-group col-sm-6">
+    <input type="email" required="" name="email" placeholder="Email*">
+    </div>
+    <div class="form-group col-sm-12">
+    <input type="text" name="subject" placeholder="Subject (Optinal)">
+    </div>
+    <div class="form-group col-sm-12">
+    <textarea name="message" required="" placeholder="Message*"></textarea>
+    </div>
+    {{-- <div class="form-group form-group-message col-sm-12">
+    <span id="success" class="text-primary">Thank You, your message is successfully sent!</span>
+    <span id="error" class="text-primary">Sorry, something went wrong </span>
+    </div> --}}
+    <div class="col-sm-12"><button type="submit" class="btn">Contact me</button></div>
+    </div>
 </form>
 </div>
 </div>
